@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 // Import Libraries
-import { DBMS_Name, FolderManager } from "../config/DB";
+import { FolderManager } from "../config/DB";
+import { General } from "../config/Keys/Keys";
 import path from "path";
 
 export default class Configure {
@@ -15,14 +16,14 @@ export default class Configure {
   constructor(
     Schema: object | any,
     isEncrypted = false,
-    ClusterName: string = DBMS_Name,
+    ClusterName: string = General.DBMS_Name,
   ) {
     this.Schema = Schema;
     this.isEncrypted = isEncrypted;
-    this.#encryptionKey = DBMS_Name;
+    this.#encryptionKey = General.DBMS_Name;
     this.clusterName = ClusterName;
     this.currentPATH = path.resolve(".");
-    this.CreateTreeRoot(); // Create
+    this.CreateTreeRoot(); // Create the root directory for the tree structure.
   }
 
   // Configure Method

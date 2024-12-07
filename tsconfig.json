@@ -10,6 +10,7 @@
     "sourceMap": true,
     "jsx": "react", // Specify the JSX factory function
     "strict": true,
+    "removeComments": true,
     "esModuleInterop": true,
     "skipLibCheck": true, // Skip type checking of declaration files from dependencies
     "forceConsistentCasingInFileNames": true,

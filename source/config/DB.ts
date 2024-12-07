@@ -5,9 +5,9 @@ import FileManager from "../Storage/FileManager";
 import FolderManager from "../Storage/FolderManager";
 import Configure from "../Operation/Indexation.operation";
 
-// Default Keys
-export const DBMS_Name = "AxioDB";
-export const DBMS_File_EXT = ".axiodb";
+// Web Server Configuration
+import WebServer from "../Web/Fastify";
+WebServer();
 
 // Export Specific Modules
 export { SchemaTypes, schemaValidate, FileManager, FolderManager, Configure };
